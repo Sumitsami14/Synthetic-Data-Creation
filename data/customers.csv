@@ -1,0 +1,21 @@
+customer_id,first_name,last_name,email,phone_number,address,city,state,zip_code,kyc_status
+f5104ecb-6317-46ae-a3ab-c7665db992fa,Christopher,Weaver,glowery@example.net,467-592-5027x706,862 Johnson Roads Suite 216,Ericland,Montana,90284,Failed
+3fbb0f9b-2007-48ff-887e-09aa60711a00,Emily,Mora,ehughes@example.net,001-755-613-8233x926,700 Richard Neck,Aaronville,Vermont,69988,Verified
+b265d2f8-f2ff-4d2b-a579-305a3efddfc1,Ryan,Wheeler,johnsantos@example.net,513.399.4977,0252 James Glen Suite 713,Haleymouth,Illinois,84973,Pending
+c7d2e093-e908-4625-8472-f43649e0ee70,Willie,Ferguson,shafferjack@example.com,727.843.5668x7920,74554 Rice Way,South Sandrafort,Washington,92645,Pending
+40454919-1ac1-4299-9d3a-72384f43b503,Amy,Gonzalez,jpitts@example.com,(729)870-3645x910,8423 Anthony Street,Pittsmouth,Virginia,04591,Failed
+7d979a1d-363c-4d87-a83a-a2cda13dd90d,Sara,Wang,samuelmaldonado@example.com,541.496.7009,3450 Mcdaniel Keys,North Christopher,Louisiana,53217,Failed
+60b0ca01-2606-461b-a16d-f09a186ed8cc,Lee,Johnson,uvargas@example.org,(354)400-5652x602,482 Bishop Union,Myershaven,Oklahoma,38526,Verified
+53e2ab1f-1b75-4432-9f2c-91b413f4b2be,Jennifer,Wyatt,tuckerbrianna@example.net,442-891-1071x110,047 Barbara Stravenue,Tabithaborough,Utah,32905,Verified
+ab022f0b-b09e-409a-b62e-bb57a595bcf3,Brandon,Rogers,kgraham@example.org,(516)240-7675,48305 Bradford Trail Apt. 655,South Kathybury,South Dakota,11537,Failed
+b727a570-bafd-4a8b-bd6e-ef7efa046c0d,Jeremiah,Brown,christiansalinas@example.net,222-934-7921,730 Johnson Fields,Joannamouth,Wyoming,29478,Pending
+42069ef5-d7c7-4bc3-9f02-67de92392e79,Mark,Stevenson,michelle90@example.com,+1-629-763-4058x66304,147 Aaron Trail Suite 225,Port Jacob,Oklahoma,36522,Failed
+6615714d-6abb-4e39-94f9-5d5e603846e9,Ellen,Sampson,jacqueline44@example.org,001-629-394-8829x87868,23702 Mendoza Stream Suite 533,Garrisonborough,West Virginia,08819,Verified
+5fd3390e-2f91-4a86-a181-daa990115f85,Andrea,Baldwin,mberry@example.org,(203)564-2460x3264,869 Brady Court,New Crystal,New York,57445,Failed
+fa426031-7728-4197-bab1-4a21660a46ae,Heidi,Noble,robinsondavid@example.com,6805620075,3324 Skinner Trail Apt. 618,North Johnberg,Alaska,89628,Verified
+a2eccbcd-d263-4ce0-973f-4e23f0936f49,Zachary,Allen,nataliedouglas@example.com,479-810-3563x76039,68266 Perez Mall Apt. 537,East Jennifer,South Carolina,97980,Failed
+2c54b732-b333-4845-bfd9-dd4f81d026f9,Eric,Williams,iwilliams@example.org,001-936-884-2205x8152,6368 Carter Ramp,Edwardsberg,New Mexico,39305,Failed
+3632ec27-1c6d-4f9f-913c-7f26db4c8817,Timothy,Harris,fwashington@example.org,282.555.0610x000,86029 Melissa Extensions,Amberberg,Kentucky,55094,Verified
+10f8d90d-cee4-4313-a684-efc51c990702,Trevor,Collier,jacquelinethomas@example.net,+1-619-623-1363x1651,5861 Hunter Vista Suite 233,Gardnershire,North Dakota,31809,Failed
+a041f030-d7ed-4468-8f8e-48c8038be8cc,Nicholas,Rice,stephaniesmith@example.org,+1-268-753-2333x896,3287 Parker Inlet Suite 618,Port Stevenborough,North Carolina,81574,Pending
+12d337e2-10fb-4e6c-86ab-0c77124e600d,Victoria,Ramos,dianemcconnell@example.com,483-213-7999x401,61804 Marcus Route Apt. 527,North Yolandaberg,Nebraska,21333,Verified

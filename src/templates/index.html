@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthetic Banking Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Synthetic Banking Data Generator</h1>
+            <p>Generate realistic test data for banking applications.</p>
+        </header>
+
+        <main>
+            <!-- Form Section -->
+            <section class="card form-section">
+                <h2>New Request</h2>
+                <form id="generateForm">
+                    <div class="form-group">
+                        <label for="customers">Number of Customers</label>
+                        <input type="number" id="customers" value="100" min="1" max="10000" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="format">Output Format</label>
+                        <select id="format">
+                            <option value="csv">CSV</option>
+                            <option value="json">JSON</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="generateBtn">
+                        <span class="btn-text">Start Generation</span>
+                        <div class="spinner"></div>
+                    </button>
+                    <div id="formMessage" class="message"></div>
+                </form>
+            </section>
+
+            <!-- Dashboard Section -->
+            <section class="card dashboard-section">
+                <div class="header-row">
+                    <h2>Requests History</h2>
+                    <button id="refreshBtn" class="icon-btn">Refresh</button>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Time</th>
+                                <th>Customers</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyTableBody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Faker
+pandas
+numpy
+flask
+sqlalchemy
+flask-sqlalchemy
