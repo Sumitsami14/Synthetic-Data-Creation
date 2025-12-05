@@ -1,72 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synthetic Banking Data</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Synthetic Data Suite</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>Synthetic Banking Data Generator</h1>
-            <p>Generate realistic test data for banking applications.</p>
-        </header>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <i class="fa-solid fa-cube"></i>
+                <span>SynData</span>
+            </div>
 
-        <main>
-            <!-- Form Section -->
-            <section class="card form-section">
-                <h2>New Request</h2>
-                <form id="generateForm">
-                    <div class="form-group">
-                        <label for="customers">Number of Customers</label>
-                        <input type="number" id="customers" value="100" min="1" max="10000" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="format">Output Format</label>
-                        <select id="format">
-                            <option value="csv">CSV</option>
-                            <option value="json">JSON</option>
-                        </select>
-                    </div>
+            <nav class="nav-links">
+                <button class="nav-btn active" data-view="dashboard">
+                    <i class="fa-solid fa-chart-pie"></i> Dashboard
+                </button>
+                <button class="nav-btn" data-view="generator">
+                    <i class="fa-solid fa-bolt"></i> Generator
+                </button>
+                <button class="nav-btn" data-view="agent">
+                    <i class="fa-solid fa-robot"></i> AI Agent
+                </button>
+            </nav>
 
-                    <button type="submit" id="generateBtn">
-                        <span class="btn-text">Start Generation</span>
-                        <div class="spinner"></div>
-                    </button>
-                    <div id="formMessage" class="message"></div>
-                </form>
+            <div class="user-profile">
+                <!-- Placeholder for future auth -->
+                <div class="avatar">U</div>
+                <div class="user-info">
+                    <span class="name">User</span>
+                    <span class="role">Admin</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Dashboard View -->
+            <section id="view-dashboard" class="view-section active">
+                <header class="section-header">
+                    <h1>Dashboard Overview</h1>
+                    <button class="icon-btn" id="refreshStats"><i class="fa-solid fa-rotate-right"></i></button>
+                </header>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon purple"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="stat-data">
+                            <h3>Total Requests</h3>
+                            <p id="stat-total-req">-</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green"><i class="fa-solid fa-check-circle"></i></div>
+                        <div class="stat-data">
+                            <h3>Completed</h3>
+                            <p id="stat-completed">-</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon blue"><i class="fa-solid fa-users"></i></div>
+                        <div class="stat-data">
+                            <h3>Customers Generated</h3>
+                            <p id="stat-customers">-</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-container">
+                    <div class="chart-card">
+                        <h3>Request Status</h3>
+                        <canvas id="statusChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Recent Activity</h3>
+                        <div class="table-responsive">
+                            <table class="recent-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Date</th>
+                                        <th>Size</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dashboard-history-body">
+                                    <!-- Populated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!-- Dashboard Section -->
-            <section class="card dashboard-section">
-                <div class="header-row">
-                    <h2>Requests History</h2>
-                    <button id="refreshBtn" class="icon-btn">Refresh</button>
-                </div>
-                
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Time</th>
-                                <th>Customers</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="historyTableBody">
-                            <!-- Populated by JS -->
-                        </tbody>
-                    </table>
+            <!-- Generator View (Classic) -->
+            <section id="view-generator" class="view-section">
+                <header class="section-header">
+                    <h1>Manual Generator</h1>
+                </header>
+
+                <div class="card form-card">
+                    <h2>Configuration</h2>
+                    <form id="generateForm">
+                        <div class="form-group">
+                            <label for="customers">Number of Customers</label>
+                            <input type="number" id="customers" value="100" min="1" max="10000" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="format">Output Format</label>
+                            <select id="format">
+                                <option value="csv">CSV</option>
+                                <option value="json">JSON</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" id="generateBtn" class="primary-btn">
+                            <span>Start Generation</span>
+                            <div class="spinner"></div>
+                        </button>
+                    </form>
                 </div>
             </section>
+
+            <!-- Agent View -->
+            <section id="view-agent" class="view-section">
+                <header class="section-header">
+                    <h1>AI Generator Agent</h1>
+                </header>
+
+                <div class="chat-container">
+                    <div class="chat-history" id="chatHistory">
+                        <div class="message system">
+                            <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                            <div class="content">
+                                <p>Hello! I can help you generate data. Try saying "Generate 50 customers in CSV" or
+                                    "Create 200 account records".</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-area">
+                        <input type="text" id="chatInput" placeholder="Type your request here..." autocomplete="off">
+                        <button id="sendChatBtn"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </section>
+
         </main>
     </div>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="/static/js/script.js"></script>
 </body>
+
 </html>
