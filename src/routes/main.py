@@ -87,3 +87,23 @@ def download(job_id):
     # Need absolute path for send_file
     abs_path = os.path.abspath(req.file_path)
     return send_file(abs_path, as_attachment=True, download_name=f"synthetic_data_{job_id}.zip")
+
+@api_bp.route('/stats', methods=['GET'])
+def stats():
+    """
+    Return summary statistics for the dashboard.
+    """
+    total_requests = RequestLog.query.count()
+    completed_requests = RequestLog.query.filter_by(status='Completed').count()
+    failed_requests = RequestLog.query.filter_by(status='Failed').count()
+    
+    # Calculate total records generated (approximate based on logs)
+    # real implementation would store this in DB properly
+    total_customers = db.session.query(db.func.sum(RequestLog.customers_count)).scalar() or 0
+    
+    return jsonify({
+        "total_requests": total_requests,
+        "completed_requests": completed_requests,
+        "failed_requests": failed_requests,
+        "total_customers_generated": total_customers
+    })

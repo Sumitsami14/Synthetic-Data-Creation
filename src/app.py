@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from models import init_db
-from routes import api_bp
+from routes.main import api_bp
+from routes.agent import agent_bp
 import os
 
 app = Flask(__name__)
@@ -14,6 +15,7 @@ init_db(app)
 
 # Register Blueprints
 app.register_blueprint(api_bp, url_prefix='/api')
+app.register_blueprint(agent_bp, url_prefix='/api/agent')
 
 @app.route('/')
 def index():
