@@ -1,0 +1,62 @@
+[
+    {
+        "customer_id":"fde52539-2c98-4502-904a-11a034bc3657",
+        "first_name":"Chelsea",
+        "last_name":"Huff",
+        "email":"heidialvarado@example.org",
+        "phone_number":"001-859-442-2704",
+        "address":"6661 William Summit Apt. 333",
+        "city":"Carsonshire",
+        "state":"Maine",
+        "zip_code":"73799",
+        "kyc_status":"Failed"
+    },
+    {
+        "customer_id":"370ac95a-c7e0-4ac7-b998-4f6ac5330d66",
+        "first_name":"Adam",
+        "last_name":"Cardenas",
+        "email":"thompsonkrista@example.net",
+        "phone_number":"(889)286-5734x70122",
+        "address":"5188 Michelle Lodge",
+        "city":"Kimberlyborough",
+        "state":"New Mexico",
+        "zip_code":"77311",
+        "kyc_status":"Verified"
+    },
+    {
+        "customer_id":"3676d892-6335-497c-92d8-1bb03a641b4a",
+        "first_name":"Jason",
+        "last_name":"Leon",
+        "email":"hnguyen@example.org",
+        "phone_number":"878.286.7962x6093",
+        "address":"2010 Brooke Walk",
+        "city":"Kyleberg",
+        "state":"Pennsylvania",
+        "zip_code":"86746",
+        "kyc_status":"Pending"
+    },
+    {
+        "customer_id":"ab290249-5b3e-4339-a9a6-ba0739509847",
+        "first_name":"Sarah",
+        "last_name":"Quinn",
+        "email":"ryan55@example.org",
+        "phone_number":"673.939.6673x8304",
+        "address":"100 Michael Drives Suite 574",
+        "city":"East Sethmouth",
+        "state":"Iowa",
+        "zip_code":"18662",
+        "kyc_status":"Pending"
+    },
+    {
+        "customer_id":"012086b7-69db-4678-8d79-7443e76437d1",
+        "first_name":"Matthew",
+        "last_name":"Price",
+        "email":"valerie25@example.net",
+        "phone_number":"+1-932-922-5709x6454",
+        "address":"9079 Becky Heights Apt. 253",
+        "city":"North Michaelachester",
+        "state":"Delaware",
+        "zip_code":"48443",
+        "kyc_status":"Failed"
+    }
+]

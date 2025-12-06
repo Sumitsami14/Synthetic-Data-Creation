@@ -39,10 +39,15 @@ def run_generation_job(job_id, command):
             accounts_df = generate_accounts(customers_df['customer_id'].tolist())
             transactions_df = generate_transactions(accounts_df['account_id'].tolist())
         elif data_type == 'account':
-            # Need customers first
-            customers_df = generate_customers(max(10, count // 2)) 
-            accounts_df = generate_accounts(customers_df['customer_id'].tolist(), target_count=count) # hypothetical arg
-             # Fallback if generate_accounts doesn't support exact count targeting directly based on input list
+            # Generate enough customers to ensure we have enough accounts
+            # each customer gets 1-2 accounts, so generating 'count' customers is safe surplus
+            customers_df = generate_customers(count) 
+            accounts_df = generate_accounts(customers_df['customer_id'].tolist())
+            
+            # Slice to requested count
+            if len(accounts_df) > count:
+                accounts_df = accounts_df.head(count)
+                
             transactions_df = generate_transactions(accounts_df['account_id'].tolist())
         else:
              # Default full flow
@@ -52,13 +57,13 @@ def run_generation_job(job_id, command):
 
         # Export
         if fmt == 'csv':
-            export_to_csv(customers_df, os.path.join(output_dir, 'customers.csv'))
-            export_to_csv(accounts_df, os.path.join(output_dir, 'accounts.csv'))
-            export_to_csv(transactions_df, os.path.join(output_dir, 'transactions.csv'))
+            export_to_csv(customers_df, 'customers.csv', output_dir=output_dir)
+            export_to_csv(accounts_df, 'accounts.csv', output_dir=output_dir)
+            export_to_csv(transactions_df, 'transactions.csv', output_dir=output_dir)
         else:
-            export_to_json(customers_df, os.path.join(output_dir, 'customers.json'))
-            export_to_json(accounts_df, os.path.join(output_dir, 'accounts.json'))
-            export_to_json(transactions_df, os.path.join(output_dir, 'transactions.json'))
+            export_to_json(customers_df, 'customers.json', output_dir=output_dir)
+            export_to_json(accounts_df, 'accounts.json', output_dir=output_dir)
+            export_to_json(transactions_df, 'transactions.json', output_dir=output_dir)
 
         # Zip it
         import shutil

@@ -1,0 +1,11 @@
+customer_id,first_name,last_name,email,phone_number,address,city,state,zip_code,kyc_status
+46d51bd1-6be8-4851-8a2f-8df188634d66,Matthew,Castro,thomas49@example.net,401-744-4894,395 Jack View Apt. 782,Zacharymouth,New Mexico,17704,Verified
+c19ded67-b6f9-483b-959b-37c313e1758c,Mary,Ortiz,tanyapitts@example.org,001-921-413-9136x785,278 Glover Corner,Haynestown,Georgia,92423,Pending
+839504d4-3468-4dd5-8c33-f5875d73f5c6,Erik,Collins,coxchristina@example.net,001-382-290-3727x9582,009 Michael Streets Apt. 025,Mariaborough,Wisconsin,77291,Verified
+2ff83e41-d58a-4db3-bfe4-7b6cb23c8d0a,Anthony,Gutierrez,xduke@example.com,(573)617-9557x4006,718 Veronica Station Apt. 975,South Richardtown,South Dakota,04740,Pending
+6c320265-6dfb-4079-a454-26f0a8e70f18,Erika,Clark,brianpadilla@example.com,322.616.2195x9236,5636 Thomas Crossroad Suite 606,South Frank,Texas,53612,Verified
+1e86bb58-b264-4c74-a93b-2a03aa5ce7dc,James,Serrano,gwatts@example.org,+1-705-710-9334x5250,30758 Isabella Knolls Apt. 923,Port Brittany,Missouri,42611,Pending
+eb1c916c-b630-4d42-b9c7-bc665a24684c,Keith,Freeman,framsey@example.net,267-251-3617x335,009 David Island Apt. 005,New Stevenfurt,North Dakota,14542,Pending
+f1cfe60b-890a-42ea-8b8c-7ad30e9c55f7,Mark,Hunt,jonesmanuel@example.org,(388)491-0656,57518 Christensen Spur,Lake Charles,Nebraska,57024,Failed
+a51b63cc-8602-4585-909e-034e838c4333,Michael,Little,nancy77@example.com,+1-767-292-3258,8657 Hughes Overpass Suite 593,Jennifershire,Utah,96257,Pending
+15868fb8-dfc7-4b3a-861f-a681a1d6ccd1,Ashley,Foster,ghubbard@example.net,269.480.9326x25149,6801 Kayla Islands,Leonardchester,Missouri,05765,Failed
