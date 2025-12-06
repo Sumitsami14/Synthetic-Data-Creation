@@ -1,0 +1,21 @@
+customer_id,first_name,last_name,email,phone_number,address,city,state,zip_code,kyc_status
+f77dbc24-7c2d-42a7-b38c-c00e6aa72ba1,Tina,Smith,fsimpson@example.net,774-479-3309x68691,53986 Emily Forge,Wrightberg,Connecticut,78419,Pending
+e2cae972-4216-4a27-87dd-d373195d0c98,Amanda,Sanchez,reginaldwright@example.com,3435621163,07492 Walker Prairie Apt. 869,South Daniel,Oklahoma,44061,Failed
+d6dfd97d-5552-43aa-b77b-710662a99aee,Michele,Taylor,anitacollins@example.org,507-667-6540,08182 Carl Ranch Apt. 356,Lake Elizabethside,Maryland,24833,Verified
+55ae9a10-781c-4a63-962b-888f2ecae025,Ann,Martin,bjohnson@example.net,+1-959-412-9516x958,0186 Wolf Viaduct,Mitchellmouth,New Hampshire,30852,Verified
+8e6dc9c0-93fa-4a21-ae17-90ca182dffab,Lisa,Smith,mruiz@example.net,(740)593-8808x1902,887 Mia Mews Apt. 188,Dennisbury,Nevada,77233,Failed
+4022b8ad-2383-48f2-acb4-ef8be849a65c,Caitlyn,Newman,romerojonathan@example.net,6126091453,146 Rice Knoll Suite 296,Simpsonburgh,South Dakota,69396,Pending
+ae5990b4-685f-464e-8618-22b0da3aa4aa,William,Kirby,zimmermanmorgan@example.net,785.889.9610x32114,874 Cantrell Forges,Palmershire,Arkansas,86899,Failed
+119f3f68-b6d9-4537-9aad-5aaf9d5f449a,Katherine,Gray,jdonovan@example.org,450-924-8402x3795,2997 Johnny Inlet,Lake Charlesfurt,North Carolina,55559,Pending
+3f107efe-c7f0-4d71-91b8-f9b082090a19,Leslie,Barnes,jensenlinda@example.org,955.493.3047x680,90166 Christopher Harbor,East Amy,New Hampshire,23394,Failed
+3d9898d7-b3f2-437c-b1c9-fc8c921db9e2,Colton,Gill,shicks@example.org,491.950.4504x047,168 Tyler Garden Suite 493,Stephaniemouth,Washington,77744,Pending
+5987712a-e096-47c6-97d6-e9f564b94cfd,Carl,Schneider,melanie54@example.org,+1-240-216-2004x1412,1268 Aguilar Via Apt. 123,Vaughnview,Delaware,89118,Verified
+e4308686-5f99-48a5-9fe6-30d383916a60,Kristin,Moore,rgallegos@example.com,001-212-678-0631,8882 Mark Rest Apt. 731,South Christopherport,Wyoming,82172,Verified
+8deb0ed0-88d6-4da9-9126-442b1bd8932b,Jasmine,Garcia,wsandoval@example.com,671.562.0755x2050,315 Ryan Isle Apt. 338,North Carrie,Iowa,04572,Verified
+f3e154b8-26fc-45b1-b825-ab6a71627c3a,Gregg,Ayala,michaeljohnson@example.net,379.277.4570x4196,4387 Jarvis Light Suite 156,Atkinsport,West Virginia,69835,Failed
+e0075e04-4a57-4606-8d32-a3ddb6e601c7,Ronald,Ortiz,ethancaldwell@example.org,592-761-4610x590,245 Joshua Underpass,South Jonathan,New Jersey,71701,Pending
+3b176106-3a8c-4ff0-b319-19f9ec5eb6ff,Jennifer,Watkins,matthewsfrancisco@example.com,486-267-4379x83364,62370 Anderson Highway Suite 861,Charlesberg,Pennsylvania,94128,Pending
+bcfc9435-44eb-4b74-8e34-6961d261c449,Brittney,Holder,smallbreanna@example.net,+1-708-421-8938,572 Scott Well Suite 561,Markstad,Illinois,48046,Failed
+93788f24-1eb7-4612-99d5-0a5eca481729,Veronica,Bailey,taylordebra@example.com,001-302-985-3173x54817,7160 Conley Overpass,Andrewsstad,New Mexico,39173,Verified
+cad8e74e-e225-482e-9bed-75c31a5ce535,Matthew,Wilson,nfernandez@example.net,001-522-343-1835x526,4780 Kiara Rue Suite 846,Jasonport,Alabama,18898,Failed
+10059a2f-9ebf-4866-9f08-2d10b90b36a3,Maria,Wilson,justin48@example.org,470.834.8517x9066,014 Farrell Island,Maciasland,Indiana,30261,Verified
