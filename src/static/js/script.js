@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('stat-total-req').textContent = stats.total_requests;
             document.getElementById('stat-completed').textContent = stats.completed_requests;
             document.getElementById('stat-customers').textContent = stats.total_customers_generated;
+            document.getElementById('stat-transactions').textContent = stats.total_transactions_generated;
 
             // 2. Render/Update Chart
             renderChart(stats);
