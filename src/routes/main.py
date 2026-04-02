@@ -31,6 +31,10 @@ def run_generation_task(app, request_id, customers_count, fmt):
             accounts_df = generate_accounts(customer_ids)
             account_ids = accounts_df["account_id"].tolist()
             transactions_df = generate_transactions(account_ids)
+            
+            # Save the transaction count to the request log
+            req.transactions_count = len(transactions_df)
+            db.session.commit()
 
             # Export
             if fmt == "csv":
@@ -100,10 +104,12 @@ def stats():
     # Calculate total records generated (approximate based on logs)
     # real implementation would store this in DB properly
     total_customers = db.session.query(db.func.sum(RequestLog.customers_count)).scalar() or 0
+    total_transactions = db.session.query(db.func.sum(RequestLog.transactions_count)).scalar() or 0
     
     return jsonify({
         "total_requests": total_requests,
         "completed_requests": completed_requests,
         "failed_requests": failed_requests,
-        "total_customers_generated": total_customers
+        "total_customers_generated": total_customers,
+        "total_transactions_generated": total_transactions
     })

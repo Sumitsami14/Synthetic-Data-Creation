@@ -7,6 +7,7 @@ class RequestLog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
     customers_count = db.Column(db.Integer, nullable=False)
+    transactions_count = db.Column(db.Integer, default=0)
     status = db.Column(db.String(20), default="Pending")
     file_path = db.Column(db.String(200), nullable=True)
 
@@ -15,6 +16,7 @@ class RequestLog(db.Model):
             'id': self.id,
             'timestamp': self.timestamp.isoformat(),
             'customers_count': self.customers_count,
+            'transactions_count': self.transactions_count,
             'status': self.status,
             'file_path': self.file_path
         }
